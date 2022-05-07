@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Head from "next/head";
 
 const api = {
   key: "ff939a393fd1717f027d96418df05c15",
@@ -56,6 +57,9 @@ const Home = () => {
 
   return (
     <>
+      <Head>
+        <title>Know Your 🌡️Weather | By Vaibhav Vyas</title>
+      </Head>
       <div
         className={
           typeof weather.main != "undefined"
@@ -65,27 +69,33 @@ const Home = () => {
             : "App"
         }
       >
-        <main>
+        <main className=" min-h-screen p-10">
           <div className="search-box flex justify-center items-center">
             <input
               type="text"
-              className="search-bar flex w-[50%] appearance-none bg-none border-none outline-none rounded-lg text-[20px] justify-center items-center font-Montserrat font-medium"
+              className="search-bar flex w-[50%] appearance-none bg-none border-none outline-none rounded-lg text-[20px] justify-center items-center font-Montserrat font-medium flex-wrap"
               placeholder="Enter City / Country"
               onChange={(e) => setQuery(e.target.value)}
               onKeyPress={search}
             />
           </div>
           {typeof weather.main != "undefined" ? (
-            <div>
+            <div className="pt-3">
               <div className="location-box">
-                <div className="location">
+                <div className="location font-Montserrat text-[32px] font-medium text-white text-center ">
                   {weather.name},{weather.sys.country}
                 </div>
-                <div className="date">{dateBuilder(new Date())}</div>
+                <div className="date font-Montserrat text-white text-center font-[20px] italic font-light ">
+                  {dateBuilder(new Date())}
+                </div>
               </div>
-              <div className="weather-box">
-                <div className="temp">{Math.round(weather.main.temp)}°c</div>
-                <div className="weather">{weather.weather[0].main}</div>
+              <div className="weather-box font-Montserrat text-center">
+                <div className="temp relative inline-block m-7 rounded-2xl text-center text-[102px] font-black text-white">
+                  {Math.round(weather.main.temp)}°c
+                </div>
+                <div className="weather font-extrabold font-Montserrat">
+                  {weather.weather[0].main}
+                </div>
               </div>
             </div>
           ) : (
