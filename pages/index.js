@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Head from "next/head";
+// require("dotenv").config({ debug: true });
 
 const api = {
   key: "ff939a393fd1717f027d96418df05c15",
@@ -64,9 +65,9 @@ const Home = () => {
         className={
           typeof weather.main != "undefined"
             ? weather.main.temp > 16
-              ? "App warm"
-              : "App"
-            : "App"
+              ? "Home warm"
+              : "Home"
+            : "Home"
         }
       >
         <main className=" min-h-screen p-10">

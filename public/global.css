@@ -10,14 +10,14 @@
     box-sizing: border-box;
   } */
    
-  .App {
+  .Home {
     background-image: url('./assets/cold.png');
     background-size: cover;
     background-position: bottom;
     transition: .4s ease;
   }
   
-  .App.warm {
+  .Home.warm {
     background-image: url('./assets/warm-bg.jpg');
   }
   
