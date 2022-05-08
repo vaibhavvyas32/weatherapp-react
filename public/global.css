@@ -11,14 +11,14 @@
   } */
    
   .Home {
-    background-image: url('./assets/cold.png');
+    background-image: url('/assets/cold.png');
     background-size: cover;
     background-position: bottom;
     transition: .4s ease;
   }
   
   .Home.warm {
-    background-image: url('./assets/warm-bg.jpg');
+    background-image: url('/assets/warm-bg.jpg');
   }
   
   /* main {
@@ -76,13 +76,13 @@
     font-weight: 900;
    */
     text-shadow: 3px 6px rgba(50,50,70,0.5);
-    text-align: center;
+    /* text-align: center; */
     box-shadow: 3px 6px rgba(0,0,0,0.2);
   } 
   
   .weather-box .weather {
-    color: #FFF;
-    font-size: 48px;
-    font-weight: 700;
+    /* color: #FFF; */
+    /* font-size: 48px;
+    font-weight: 700; */
     text-shadow: 3px 3px rgba(50,50,70,0.5);
   }

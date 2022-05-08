@@ -1,7 +1,5 @@
 import { useState } from "react";
 import Head from "next/head";
-import "../public/global.css";
-// require("dotenv").config({ debug: true });
 
 const api = {
   key: "ff939a393fd1717f027d96418df05c15",
@@ -95,7 +93,7 @@ const Home = () => {
                 <div className="temp relative inline-block m-7 rounded-2xl text-center text-[102px] font-black text-white">
                   {Math.round(weather.main.temp)}°c
                 </div>
-                <div className="weather font-extrabold font-Montserrat">
+                <div className="weather font-semibold font-Montserrat text-[48px] text-white">
                   {weather.weather[0].main}
                 </div>
               </div>
